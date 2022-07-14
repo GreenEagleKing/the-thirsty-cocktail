@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>The Thirsty Cocktail</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+		<div id="loader" style="display:none">
+			<img src="./img/shaker-animation.gif" alt="Shaking cocktail mixer">
+		</div>
+
+		<div id="title">The Thirsty Cocktail</div>
+
+		
+	<section class="container">
+
+		<section class="what-drink-container">
+			<h1>What would you like to drink?</h1>
+			<input type="text" name="" value="">
+			<section class="button-container">
+				<button type="button" id="submit" name="button" >I want this drink</button>
+				<button type="button" id='carousel' name="carouselButton">Try another drink</button>
+			</section>
+		</section>
+
+		<section class="result-ingredient-container">
+			<section class="result-container">
+			<h2>Name</h2>
+			<h3>Instructions :</h3>
+			<h3 class="drinkInstructions"></h3>
+			<img id="drinkImg" src="" alt="">
+			</section>
+
+			<section class="ingredients-measures-container" >
+				<section class="ingredients-container">
+					<h2>Ingredients :</h2>
+					<div class="ingredients"></div>
+				</section>
+				<section class="measures-container">
+					<h2>Measurements :</h2>
+					<div class="measurements"></div>
+				</section>
+			</section>
+		</section>		
+
+
+	</section>
+
+		<script type="text/javascript" src="js/main.js"></script>
+
+	</body>
+</html>

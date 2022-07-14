@@ -1,0 +1,213 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+html,
+body {
+  background-image: url('https://www.cornergas.com/wp-content/uploads/2020/05/CGA_BG_medCU_Tavern.png');
+  background-repeat: round;
+  overflow: hidden;
+  height: 100%;
+  font-family: Oswald;
+  overflow-y: auto;
+  
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  color: black;
+  background-color: white;
+  margin: auto;
+  margin-top: 80px;
+  border: 8px solid rgb(48, 48, 49);
+  border-radius: 20px;
+  padding: 10px;
+  width: 800px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  /* height: 100%; */
+}
+
+.what-drink-container {
+  border: 7px solid rgb(48, 48, 49);
+  border-radius: 20px;
+  background-color: white;
+  padding: 10px 25px 40px 25px;
+  height: 400px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -10px 10px 4px rgb(0, 0, 0, 0.4);
+}
+
+#loader {
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(90, 34, 28, 0.973);
+  position: fixed;
+}
+
+#loader img {
+  position: absolute;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.result-ingredient-container {
+  display: none;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.result-container {
+  border: 7px solid rgb(48, 48, 49);
+  border-radius: 20px;
+  background-color: white;
+  margin: 50px 20px 0px 0px;
+  padding: 29px 36px 50px 50px;
+  width: 700px;
+  box-shadow: -10px 10px 4px rgb(0, 0, 0, 0.4);
+}
+
+.ingredients-measures-container {
+  display: none;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.ingredients-container {
+  border: 7px solid rgb(48, 48, 49);
+  border-radius: 20px;
+  background-color: white;
+  margin: 50px 0px 0px 20px;
+  padding: 29px 36px 50px 50px;
+  width: 700px;
+  box-shadow: -10px 10px 4px rgb(0, 0, 0, 0.4);
+  height: max-content
+}
+
+.measures-container {
+  border: 7px solid rgb(48, 48, 49);
+  border-radius: 20px;
+  background-color: white;
+  margin: 50px 0px 0px auto;
+  padding: 29px 36px 50px 50px;
+  width: 700px;
+  box-shadow: -10px 10px 4px rgb(0, 0, 0, 0.4);
+  height: max-content;
+  justify-self: baseline;
+}
+
+h1 {
+  padding: 20px 0px 10px 0px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  
+}
+
+h3 {
+  width: 600px;
+}
+
+.ingredients,
+li {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#drinkImg{
+  display: flex;
+  justify-self: center;
+  max-width: 500px;
+  margin: 50px auto 0;
+  border: 5px solid #5c1003;
+  border-radius: 10px;
+}
+
+input {
+  font-size: 25px;
+  border: 3px solid rgb(48, 48, 49);
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  display: flex;
+  margin-top: 20px;
+  background-color: #e49292;
+  border: 2px solid #5c1003;
+  border-radius: 30px;
+  box-shadow: #5c1003 4px 4px 0 0;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  background-color: #fff;
+}
+
+button:active {
+  box-shadow: #5c1003 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+#carousel {
+  font-size: 20px;
+}
+
+#submit {
+  font-size: 20px;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
