@@ -5,7 +5,6 @@ document.querySelector('button').addEventListener('click',() =>{
     loader()
     getDrink()
     setTimeout(showResult, 1500)
-    window.scrollTo(0,700)
 })
 welcome()
 
@@ -60,6 +59,17 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktailName}`
     
 }
 
+// fetch (`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
+//     .then(res => data.json())
+//     .then(data => {
+//         console.log(data)
+
+//     })
+//     .catch(err => {
+//         console.log(`error ${err}`)
+//         alert("Error! Drink not found try another")
+// })
+
 // Welcome message varies depending on time of day
 function welcome() {
 
@@ -84,10 +94,10 @@ function welcome() {
 function carouselInput(drinkName) {
     let btnText = document.getElementById('carousel').textContent
     console.log(btnText)
-    btnText = 'Try another ' + drinkName + ' drink'
+    btnText = drinkName.charAt(0).toUpperCase() + drinkName.slice(1)
     console.log(btnText)
 
-    document.getElementById('carousel').textContent = btnText
+    document.getElementById('buttonDrinkText').textContent = btnText
 }
 
 // When drink is fetched this function creates a new div element for each ingredient
@@ -113,7 +123,7 @@ function removeIngredients() {
  // When "I want this drink" clicked ingredients and result show
  function showResult() {
      document.querySelector('.result-ingredient-container').style.display = 'flex'
-     document.querySelector('.ingredients-measures-container').style.display = 'flex'
+     document.querySelector('.ingredients-container').style.display = 'flex'
  }
 
  // Fetching the drink measurements and appending to dom

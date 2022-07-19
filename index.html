@@ -27,28 +27,33 @@
 			<input type="text" name="" value="">
 			<section class="button-container">
 				<button type="button" id="submit" name="button" >I want this drink</button>
-				<button type="button" id='carousel' name="carouselButton">Try another drink</button>
+				<section class="carousel-container">
+					<img src="./img/simple-rounded-arrow-right.png" id="left-arrow">
+					<button type="button" id='carousel' name="carouselButton">Try another <span id="buttonDrinkText"></span> drink</button>
+					<img src="./img/simple-rounded-arrow-right.png" id="right-arrow">
+				</section>
 			</section>
 		</section>
 
 		<section class="result-ingredient-container">
 			<section class="result-container">
 			<h2>Name</h2>
-			<h3>Instructions :</h3>
+			<h3>How to make :</h3>
 			<h3 class="drinkInstructions"></h3>
 			<img id="drinkImg" src="" alt="">
 			</section>
 
-			<section class="ingredients-measures-container" >
-				<section class="ingredients-container">
-					<h2>Ingredients :</h2>
-					<div class="ingredients"></div>
-				</section>
-				<section class="measures-container">
-					<h2>Measurements :</h2>
-					<div class="measurements"></div>
+			<section class="ingredients-container">
+				<h2>Ingredients & Measurements:</h2>
+				<section id="ingredient-measure-list">
+				<div class="ingredients"></div>
+				<div class="measurements"></div>
 				</section>
 			</section>
+			<!-- <section class="measures-container">
+				<h2>Measurements :</h2>
+				<div class="measurements"></div>
+			</section> -->
 		</section>		
 
 

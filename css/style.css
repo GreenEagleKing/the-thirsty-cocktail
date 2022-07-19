@@ -53,7 +53,7 @@ body {
   border: 7px solid rgb(48, 48, 49);
   border-radius: 20px;
   background-color: white;
-  padding: 10px 25px 40px 25px;
+  padding: 10px 25px 20px 25px;
   height: 400px;
   width: 700px;
   display: flex;
@@ -61,6 +61,11 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: -10px 10px 4px rgb(0, 0, 0, 0.4);
+}
+
+.carousel-container{
+  display: flex;
+  align-items: center;
 }
 
 #loader {
@@ -95,21 +100,27 @@ body {
   box-shadow: -10px 10px 4px rgb(0, 0, 0, 0.4);
 }
 
-.ingredients-measures-container {
-  display: none;
-  flex-direction: column;
-  /* justify-content: space-between; */
-}
-
 .ingredients-container {
   border: 7px solid rgb(48, 48, 49);
   border-radius: 20px;
   background-color: white;
   margin: 50px 0px 0px 20px;
   padding: 29px 36px 50px 50px;
-  width: 700px;
+  width: 500px;
   box-shadow: -10px 10px 4px rgb(0, 0, 0, 0.4);
-  height: max-content
+  height: max-content;
+  display: none;
+  flex-direction: column;
+}
+
+#ingredient-measure-list {
+  display: flex;
+}
+
+.measurements {
+  list-style-type: none;
+  margin-left: 10%;
+  margin-top: 10px;
 }
 
 .measures-container {
@@ -155,6 +166,7 @@ li {
 
 input {
   font-size: 25px;
+  margin-bottom: 20px;
   border: 3px solid rgb(48, 48, 49);
   border-radius: 10px;
   padding: 5px;
@@ -170,7 +182,7 @@ input {
 
 button {
   display: flex;
-  margin-top: 20px;
+  margin: 0px 40px 20px 40px;
   background-color: #e49292;
   border: 2px solid #5c1003;
   border-radius: 30px;
@@ -198,8 +210,17 @@ button:active {
   transform: translate(2px, 2px);
 }
 
+#buttonDrinkText {
+  color: rgb(255, 255, 255);
+}
+
+button:hover > #buttonDrinkText{
+  color: #e49292;
+}
+
 #carousel {
   font-size: 20px;
+  margin-top: 10px;
 }
 
 #submit {
@@ -211,3 +232,13 @@ button:active {
 /* ADDITIONAL STYLES
 /*******************************************/
 
+/* Arrows */
+
+#right-arrow{
+  width: 40px;
+}
+
+#left-arrow{
+  width: 40px;
+  transform: rotate(180deg);
+}
