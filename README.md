@@ -2,7 +2,7 @@
 
 Welcome to The Thirsty Cocktail, a bar open 24/hrs a day to help you choose a new exciting cocktail. You can input your alcohol of choice and then move through the catalogue of drinks in that category. 
 
-![image](https://github.com/GreenEagleKing/the-thirsty-cocktail/blob/main/img/Screenshot%20from%202022-07-13%2017-44-55.png)
+![gif](https://github.com/GreenEagleKing/the-thirsty-cocktail/blob/main/img/cocktail-showcase.gif)
 
 # How It's Made:
 Tech used: HTML, CSS, JavaScript, Cocktail API (https://www.thecocktaildb.com/api.php)
