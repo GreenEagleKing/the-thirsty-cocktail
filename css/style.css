@@ -25,6 +25,22 @@ body {
   
 }
 
+#loader {
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(90, 34, 28, 0.973);
+  position: fixed;
+}
+
+#loader img {
+  position: absolute;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #title {
   display: flex;
   align-items: center;
@@ -68,20 +84,24 @@ body {
   align-items: center;
 }
 
-#loader {
-  display: none;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(90, 34, 28, 0.973);
-  position: fixed;
+#aRight{
+  height: 49px;
+  width: 30px;
+  background: url("../img/Arrow-Before30px.png") no-repeat;
 }
 
-#loader img {
-  position: absolute;
-  height: 250px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#aLeft{
+  height: 49px;
+  width: 30px;
+  background: url("../img/Arrow-Left-Before30px.png") no-repeat;
+}
+
+#aRight:hover{
+  background: url("../img/Arrow-After30px.png") no-repeat;
+}
+
+#aLeft:hover{
+  background: url("../img/Arrow-Left-After30px.png") no-repeat;
 }
 
 .result-ingredient-container {
@@ -231,14 +251,3 @@ button:hover > #buttonDrinkText{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-
-/* Arrows */
-
-#right-arrow{
-  width: 40px;
-}
-
-#left-arrow{
-  width: 40px;
-  transform: rotate(180deg);
-}

@@ -27,21 +27,44 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktailName}`
         document.querySelector('h2').innerText = data.drinks[0].strDrink.toUpperCase()
         document.querySelector('#drinkImg').src = data.drinks[0].strDrinkThumb
         document.querySelector('.drinkInstructions').innerText = data.drinks[0].strInstructions
-        document.querySelector('#carousel').addEventListener('click',() => {
-            removeIngredients()
-            nextDrink()
-            
+        
+        let count = 0
+
+        document.querySelectorAll('#carousel, #aRight').forEach(item => {
+            item.addEventListener('click',() => {
+                if (count === data.drinks.length -1) {
+                    count = 0;
+                    removeIngredients()
+                    nextDrink(count)
+                } else {
+                    ++count
+                    removeIngredients()
+                    nextDrink(count)
+            }})
+        })
+
+        document.querySelector('#aLeft').addEventListener('click', () => {
+            if (count <= 0) {
+                count = data.drinks.length -1
+                removeIngredients()
+                nextDrink(count)
+            } else {
+                --count
+                removeIngredients()
+                nextDrink(count)
+            }
         })
 
         //Retrieves next drink in same category
-        let i = 1
-        function nextDrink() {
+      
+        function nextDrink(count) {
+            let i = count
             numOfIngredients(data.drinks[i])
             getMeasures(data.drinks[i])     
             document.querySelector('h2').innerText = data.drinks[i].strDrink.toUpperCase()
             document.querySelector('#drinkImg').src = data.drinks[i].strDrinkThumb
             document.querySelector('.drinkInstructions').innerText = data.drinks[i].strInstructions
-            data.drinks[i++]
+            data.drinks[++i]
 
             if (i === data.drinks.length) {
                 i = 0;
@@ -59,18 +82,7 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktailName}`
     
 }
 
-// fetch (`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
-//     .then(res => data.json())
-//     .then(data => {
-//         console.log(data)
 
-//     })
-//     .catch(err => {
-//         console.log(`error ${err}`)
-//         alert("Error! Drink not found try another")
-// })
-
-// Welcome message varies depending on time of day
 function welcome() {
 
     const today = new Date()
@@ -78,13 +90,13 @@ function welcome() {
     let greet
 
     if (time >= 12 && time < 18) {
-        greet = 'What would you like to drink this afternoon?'
+        greet = 'What alcohol would you like to drink this afternoon?'
     } else if (time >= 18 && time < 23.59) {
-        greet = 'What drink would you like this evening?'
+        greet = 'What alcohol would you like this evening?'
     } else if (time > 0 && time < 1) {
         greet = 'Last orders!'
     } else {
-        greet = 'Never a better time for a drink, what would you like?'
+        greet = 'Never a better time for a drink, what alcohol would you like?'
     }
 
     document.querySelector('h1').innerText = greet
