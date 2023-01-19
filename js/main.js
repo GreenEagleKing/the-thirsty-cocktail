@@ -6,6 +6,8 @@ document.querySelector('button').addEventListener('click',() =>{
     getDrink()
     setTimeout(showResult, 1500)
 })
+
+// Welcome function runs on page load
 welcome()
 
 
@@ -21,9 +23,9 @@ function getDrink() {
 fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktailName}`)
     .then(res => res.json())
     .then(data => {
-        console.log(data.drinks)
         numOfIngredients(data.drinks[0])
         getMeasures(data.drinks[0]) 
+
         document.querySelector('h2').innerText = data.drinks[0].strDrink.toUpperCase()
         document.querySelector('#drinkImg').src = data.drinks[0].strDrinkThumb
         document.querySelector('.drinkInstructions').innerText = data.drinks[0].strInstructions
@@ -82,7 +84,7 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktailName}`
     
 }
 
-
+// Custom welcome message depending on the time of day
 function welcome() {
 
     const today = new Date()

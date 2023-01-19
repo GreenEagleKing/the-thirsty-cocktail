@@ -11,6 +11,8 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
+
+
 	<body>
 
 		<div id="loader" style="display:none">
@@ -20,46 +22,39 @@
 		<div id="title">The Thirsty Cocktail</div>
 
 		
-	<section class="container">
+	<main class="container">
 
 		<section class="what-drink-container">
 			<h1>What alcohol would you like to drink?</h1>
 			<input type="text" name="" value="">
-			<section class="button-container">
+			<div class="button-container">
 				<button type="button" id="submit" name="button" >I want this drink</button>
-				<section class="carousel-container">
+				<div class="carousel-container">
 					<div class="arrow" id="aLeft"></div>
 						<button type="button" id='carousel' name="carouselButton">Try another <span id="buttonDrinkText"></span> drink</button>
 					<div class="arrow" id="aRight"></div>
-				</section>
-			</section>
+				</div>
+			</div>
 		</section>
 
 		<section class="result-ingredient-container">
-			<section class="result-container">
-			<h2>Name</h2>
-			<h3>How to make :</h3>
-			<h3 class="drinkInstructions"></h3>
-			<img id="drinkImg" src="" alt="">
-			</section>
+			<div class="result-container">
+				<h2>Name</h2>
+				<h3>How to make :</h3>
+				<h3 class="drinkInstructions"></h3>
+				<img id="drinkImg" src="" alt="">
+			</div>
 
-			<section class="ingredients-container">
+			<div class="ingredients-container">
 				<h2>Ingredients & Measurements:</h2>
 				<section id="ingredient-measure-list">
 				<div class="ingredients"></div>
 				<div class="measurements"></div>
-				</section>
-			</section>
-			<!-- <section class="measures-container">
-				<h2>Measurements :</h2>
-				<div class="measurements"></div>
-			</section> -->
-		</section>		
+			</div>
+		</section>	
+	</main>
 
-
-	</section>
-
-		<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 
 	</body>
 </html>
